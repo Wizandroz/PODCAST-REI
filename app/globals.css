@@ -848,17 +848,20 @@ button, a, [role="button"] { -webkit-tap-highlight-color: transparent; }
   .page-banner { height: 170px; }
   .page-banner-text { left: 20px; right: 20px; bottom: 18px; }
 
-  /* Home hero — content fully centered, logo small at top-center so it
-     never covers the headline / buttons. */
-  .home-hero { padding: 220px 20px 56px !important; min-height: 100vh; text-align: center; }
+  /* Home hero — content fully centered.
+     The wide megaphone thumbnail is busy on a phone and duplicates the
+     headline copy, so we hide it on mobile and let the round logo
+     stand on its own at full opacity. */
+  .home-hero { padding: 240px 20px 56px !important; min-height: 100vh; text-align: center; }
+  .home-hero-thumb { display: none !important; }
   .home-hero-logo {
-    width: 130px !important;
-    height: 130px !important;
-    top: 80px !important;
+    width: 170px !important;
+    height: 170px !important;
+    top: 110px !important;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
-    opacity: 0.5 !important;
+    opacity: 1 !important;
   }
   .home-hero-vertical-label { display: none; }
   .home-hero-glow { width: 90vw; height: 90vw; }

@@ -87,6 +87,7 @@ export default function HomePage() {
         }}
       >
         <div
+          className="home-hero-thumb"
           style={{
             position: 'absolute',
             inset: 0,
