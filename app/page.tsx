@@ -659,7 +659,7 @@ export default function HomePage() {
             </h2>
           </RevealBlock>
           <RevealBlock delay={0.15}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+            <div className="home-themes-cloud" style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
               {THEMES_TEASER.map((t, i) => {
                 const baseColor =
                   i % 3 === 0

@@ -42,6 +42,7 @@ export default function TeamPage() {
               <div className="section-label">Membrii echipei</div>
             </RevealBlock>
             <div
+              className="team-grid"
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
