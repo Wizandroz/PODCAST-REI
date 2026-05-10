@@ -848,13 +848,14 @@ button, a, [role="button"] { -webkit-tap-highlight-color: transparent; }
   .page-banner { height: 170px; }
   .page-banner-text { left: 20px; right: 20px; bottom: 18px; }
 
-  /* Home hero — content fully centered. Megaphone thumbnail stays
-     visible at the top; the round logo sits below it at full opacity. */
-  .home-hero { padding: 240px 20px 56px !important; min-height: 100vh; text-align: center; }
+  /* Home hero — content fully centered. Megaphone thumbnail (4:1 ratio)
+     occupies ~25% of the width at the top; the round logo sits centered
+     in the dark gap between the thumbnail and the headline. */
+  .home-hero { padding: 380px 20px 56px !important; min-height: 100vh; text-align: center; }
   .home-hero-logo {
     width: 170px !important;
     height: 170px !important;
-    top: 110px !important;
+    top: 160px !important;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
