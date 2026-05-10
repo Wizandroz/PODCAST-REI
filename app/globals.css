@@ -848,12 +848,9 @@ button, a, [role="button"] { -webkit-tap-highlight-color: transparent; }
   .page-banner { height: 170px; }
   .page-banner-text { left: 20px; right: 20px; bottom: 18px; }
 
-  /* Home hero — content fully centered.
-     The wide megaphone thumbnail is busy on a phone and duplicates the
-     headline copy, so we hide it on mobile and let the round logo
-     stand on its own at full opacity. */
+  /* Home hero — content fully centered. Megaphone thumbnail stays
+     visible at the top; the round logo sits below it at full opacity. */
   .home-hero { padding: 240px 20px 56px !important; min-height: 100vh; text-align: center; }
-  .home-hero-thumb { display: none !important; }
   .home-hero-logo {
     width: 170px !important;
     height: 170px !important;
