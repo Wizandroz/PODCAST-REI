@@ -780,7 +780,7 @@ export default function HomePage() {
             </div>
           </RevealBlock>
           <RevealBlock delay={0.1}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+            <div className="home-team-roster" style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
               {TEAM.map((member, i) => (
                 <div
                   key={i}

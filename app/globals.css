@@ -444,6 +444,7 @@ body {
 .ep-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
 /* Placeholder image */
+.episode-hero-cover .img-placeholder { min-height: 380px; }
 .img-placeholder {
   background: repeating-linear-gradient(
     45deg,
@@ -783,14 +784,28 @@ button, a, [role="button"] { -webkit-tap-highlight-color: transparent; }
   .r-pad-lg { padding: 28px; }
   .r-pad-xl { padding: 32px 24px; }
 
+  /* Long copy never causes horizontal scroll */
+  p, h1, h2, h3, cite, .ep-card-title, .ep-card-desc, .display-xl, .display-lg, .display-md {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
   /* Display headings — never overflow at 320px */
   .display-xl { font-size: clamp(38px, 11vw, 64px); line-height: 0.95; }
   .display-lg { font-size: clamp(30px, 9vw, 56px); line-height: 1; }
   .display-md { font-size: clamp(24px, 7vw, 40px); line-height: 1.05; }
 
   /* Buttons → 44px tap target */
-  .btn-primary, .btn-outline { padding: 13px 22px; min-height: 44px; }
-  .filter-btn { padding: 10px 14px; min-height: 38px; }
+  .btn-primary, .btn-outline { padding: 14px 24px; min-height: 46px; }
+
+  /* Tags / chips — bigger so they're easy to read and tap */
+  .tag { font-size: 11px; padding: 6px 12px; letter-spacing: 0.12em; }
+  .filter-btn { padding: 12px 18px; min-height: 42px; font-size: 11px; margin-bottom: 4px; }
+
+  /* Form fields — 16px font prevents iOS auto-zoom on focus */
+  .form-input { padding: 16px 18px; font-size: 16px; min-height: 48px; }
+  textarea.form-input { min-height: 140px; }
+  .form-label { margin-bottom: 10px; font-size: 11px; }
 
   /* Footer */
   .footer { padding: 40px 20px 28px; }
@@ -799,16 +814,18 @@ button, a, [role="button"] { -webkit-tap-highlight-color: transparent; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 20px; text-align: left; }
   .footer-copy { font-size: 9px; line-height: 1.6; }
 
-  /* Cards */
-  .ep-card-body { padding: 20px; }
-  .ep-card-title { font-size: 20px; }
+  /* Cards — slightly tighter, with breathing room between text blocks */
+  .ep-card-body { padding: 22px; }
+  .ep-card-title { font-size: 20px; margin-bottom: 10px; }
+  .ep-card-desc { margin-bottom: 18px; }
 
   /* Quote */
-  .quote-block { padding: 18px 22px; }
-  .quote-block p { font-size: 16px; line-height: 1.55; }
+  .quote-block { padding: 20px 22px; }
+  .quote-block p { font-size: 16px; line-height: 1.6; }
+  .quote-block cite { margin-top: 14px; }
 
   /* Manifesto */
-  .manifesto-line { padding: 16px 0; gap: 10px; font-size: clamp(20px, 6.5vw, 36px); }
+  .manifesto-line { padding: 18px 0; gap: 10px; font-size: clamp(20px, 6.5vw, 36px); }
   .manifesto-line:hover { padding-left: 8px; padding-right: 8px; }
 
   /* Marquee */
@@ -835,8 +852,13 @@ button, a, [role="button"] { -webkit-tap-highlight-color: transparent; }
 
   .featured-watermark { font-size: 64px; }
 
-  /* Episode hero number watermark */
+  /* Home team roster — one card per row */
+  .home-team-roster { flex-direction: column; gap: 10px; }
+  .home-team-roster > div { width: 100%; padding: 14px 18px; }
+
+  /* Episode hero number watermark + tighter cover image */
   .ep-num-watermark { font-size: 44px; }
+  .episode-hero-cover .img-placeholder { min-height: 260px; }
 
   /* Transcript */
   .transcript-row { grid-template-columns: 1fr; gap: 6px; }
@@ -858,6 +880,9 @@ button, a, [role="button"] { -webkit-tap-highlight-color: transparent; }
 
   /* Team join CTA */
   .team-join { padding: 28px; gap: 20px; }
+
+  /* Social link grid — easier to tap, never wraps awkwardly */
+  .social-link { width: 48px; height: 48px; }
 }
 
 /* Small phones ≤ 480 */

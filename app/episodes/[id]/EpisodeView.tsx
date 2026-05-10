@@ -167,11 +167,8 @@ export default function EpisodeView({ episode: ep, related }: EpisodeViewProps) 
               )}
             </RevealBlock>
             <RevealBlock delay={0.2}>
-              <div style={{ position: 'relative' }}>
-                <PlaceholderImage
-                  label={`Foto invitat — ${ep.guest}`}
-                  style={{ minHeight: 380 }}
-                />
+              <div className="episode-hero-cover" style={{ position: 'relative' }}>
+                <PlaceholderImage label={`Foto invitat — ${ep.guest}`} />
                 <div
                   style={{
                     position: 'absolute',
